@@ -1,16 +1,50 @@
-
-<!-- Version 1.0.0 -->
-
 <!DOCTYPE html>
- <html lang="en">
- <head>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorcado - Espacio Educa</title>
+    <link rel="icon" type="image/png" href="assets/icon.png">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- </head>
- <body>
+</head>
+<body>
+
+    <div class="game-container">
+
+        <img class="logo" src="assets/icon.png" alt="Espacio Educa Logo" class="logo">
+        <h1>Ahorcado</h1>
+        
+        <div class="stats">
+            <p>Vidas Restantes: <span id="lives">3</span></p>
+            <p>Palabras Restantes: <span id="words-left">0</span></p>
+            <p>Victorias: <span id="wins">0</span>    |    Derrotas: <span id="losses">0</span></p>
+        </div>
+
+        <div class="hangman-box">
+            <svg width="200" height="250">
+                <line x1="20" y1="230" x2="180" y2="230" stroke="white" stroke-width="4"/>
+                <line x1="50" y1="230" x2="50" y2="20" stroke="white" stroke-width="4"/>
+                <line x1="50" y1="20" x2="130" y2="20" stroke="white" stroke-width="4"/>
+                <line x1="130" y1="20" x2="130" y2="50" stroke="white" stroke-width="4"/>
+                
+                <circle id="head" cx="130" cy="70" r="20" stroke="white" stroke-width="4" fill="transparent" style="opacity: 0;"/>
+                <line id="body" x1="130" y1="90" x2="130" y2="150" stroke="white" stroke-width="4" style="opacity: 0;"/>
+                <line id="armL" x1="130" y1="110" x2="100" y2="130" stroke="white" stroke-width="4" style="opacity: 0;"/>
+                <line id="armR" x1="130" y1="110" x2="160" y2="130" stroke="white" stroke-width="4" style="opacity: 0;"/>
+                <line id="legL" x1="130" y1="150" x2="100" y2="190" stroke="white" stroke-width="4" style="opacity: 0;"/>
+                <line id="legR" x1="130" y1="150" x2="160" y2="190" stroke="white" stroke-width="4" style="opacity: 0;"/>
+            </svg>
+        </div>
+
+        <div id="word-display" class="word-container">
+            </div>
+
+        <div id="keyboard" class="keyboard">
+            </div>
+
+        <button id="reset-btn" class="main-btn">Reiniciar Juego</button>
+    </div>
 
     <script src="script.js"></script>
-
- </body>
+</body>
 </html>
